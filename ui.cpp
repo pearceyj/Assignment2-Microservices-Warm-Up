@@ -31,10 +31,10 @@ int write(string r) {
 int get_response() {
     string str;
     bool valid;
-    int valid_resp;
+    int valid_res;
     do {
         getline(cin, str);
-        for (int i = 0; i < str.length(); i++) {   
+        for (int i = 0; i < str.length(); i++) {
 
             if (!(str[i] == 48 || str[i] == 49) || str.length() > 1) {
                 cout << "Please enter '1' or '0' only.\n";
@@ -45,19 +45,19 @@ int get_response() {
                 valid = true;
         }
     }while (valid == false);
-    valid_resp = stoi(str);
-    return valid_resp;
+    valid_res = stoi(str);
+    return valid_res;
 }
 
 int main() {
 
     cout << "\n\t\tWelcome to the random image service!" << endl;
 
-    int response = 0;
+    int res = 0;
     while(true) {
         cout << "\nEnter '1' to retrieve image\t\t\tEnter \'0' to quit\n" << endl;
-        response = get_response();
-        switch(response){
+        res = get_res();
+        switch(res){
             case 0: {
                 cout << "Have a good day!" << endl;
                 return 0;
@@ -70,6 +70,6 @@ int main() {
             }
         }
     }
-    
+
     return 0;
 }

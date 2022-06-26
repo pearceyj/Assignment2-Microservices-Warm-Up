@@ -39,12 +39,17 @@ int main() {
 
     srand(time(NULL));
 
-    if(read() == "run") {
-        // int select = rand()%10;
-        string ouput = to_string(rand()%10);
-        write(ouput);
+    bool run = true;
+    while(run == true) {
+        switch(read()){
+            case "run": {
+                string ouput = to_string(rand()%10);
+                write(ouput);
+                break;
+            }
+            case "exit": 
+                run = false;
+        }
     }
-
-
     return 0;
 }
